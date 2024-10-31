@@ -121,6 +121,17 @@ header {
     cursor: pointer;
 }
 
+section a {
+    display: block; /* Asegúrate de que ocupe todo el ancho */
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    margin: 40px auto; /* Centra el enlace */
+    width: 200px; /* Ajusta el ancho como necesites */
+}
+
 
 /* Footer */
 footer {
@@ -172,4 +183,42 @@ footer {
     .search {
         width: 80%;
     }
+}
+
+/* Estilos existentes (genéricos) aquí */
+
+/* -------------------- Estilos para el nuevo formulario interactivo -------------------- */
+
+.interactive-form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 300px;
+}
+
+.interactive-form h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.interactive-form .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.interactive-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.interactive-form button:hover {
+    background-color: #0056b3;
 }
