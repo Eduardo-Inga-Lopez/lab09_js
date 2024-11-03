@@ -184,3 +184,75 @@ function playRockPaperScissors() {
         alert("Perdiste. Intenta de nuevo.");
     }
 }
+
+
+// Calculadora de Edad
+
+function calculateAge() {
+    // Solicita al usuario su año de nacimiento
+    const anioNacimiento = prompt("Por favor, ingresa tu año de nacimiento:");
+    
+    // Verifica si el usuario ingresó un valor válido
+    if (anioNacimiento && !isNaN(anioNacimiento)) {
+        // Obtiene el año actual
+        const anioActual = new Date().getFullYear();
+        // Calcula la edad restando el año de nacimiento del año actual
+        const edad = anioActual - parseInt(anioNacimiento, 10);
+        // Muestra el resultado en una ventana emergente (alert)
+        alert(`Tienes ${edad} años`);
+        return edad; // Devuelve la edad calculada
+    } else {
+        // Muestra un mensaje de error si el año ingresado no es válido
+        alert("Por favor, ingresa un año válido.");
+    }
+}
+
+
+// Conversor Celsius a Fahrenheit
+function temperatureConverter() {
+    // Solicita la temperatura en Celsius al usuario
+    const celsius = prompt("Ingresa la temperatura en Celsius:");
+    // Usa la fórmula de conversión
+    const fahrenheit = (celsius * 9 / 5) + 32;
+    // Muestra el resultado en una ventana emergente (alert)
+    alert(`${celsius}°C son ${fahrenheit}°F`);
+}
+
+
+// Contador de Vocales
+
+function VowelCounter() {
+    // Solicita la palabra al usuario
+    const palabra = prompt("Ingresa una palabra:");
+    // Convierte la palabra a minúsculas para facilitar la comparación
+    const minuscula = palabra.toLowerCase();
+    // Define las vocales
+    const vocales = "aeiou";
+    let contador = 0;
+    // Recorre cada letra de la palabra
+    for (let letra of minuscula) {
+        // Verifica si la letra es una vocal
+        if (vocales.includes(letra)) {
+            contador++; // Aumenta el contador si es vocal
+        }
+    }
+    // Muestra el número de vocales en una ventana emergente (alert)
+    alert(`La palabra "${palabra}" tiene ${contador} vocales`);
+}
+
+
+
+// Generador de Tablas de Multiplicar
+
+function MultiplicationTableGenerator() {
+    // Solicita el número al usuario
+    const numero = prompt("Ingresa un número para ver su tabla de multiplicar:");
+    let tabla = `Tabla de multiplicar del ${numero}:\n`;
+    // Genera la tabla del 1 al 10
+    for (let i = 1; i <= 10; i++) {
+        tabla += `${numero} x ${i} = ${numero * i}\n`;
+    }
+    // Muestra la tabla completa en una ventana emergente (alert)
+    alert(tabla);
+}
+
